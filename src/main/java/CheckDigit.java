@@ -9,7 +9,7 @@ public class CheckDigit
    {  
      int sum = 0;
      for (int i = 1; i <= getNumberOfDigits(num); i++){
-       num+= (8-i)* getDigits(num, i);
+       num += (8-i)* getDigits(num, i);
      }
      return sum%10;
    }
@@ -23,8 +23,8 @@ public class CheckDigit
    public static boolean isValid(int numWithCheckDigit)    
    {      
      int check = numWithCheckDigits%10;
-     int num = numWithCheckDigits/10;
-     if (getCheck(num)==check){
+     int newNum = numWithCheckDigits/10;
+     if (getCheck(newNum)==check){
        return true;
      }else{
        return false;
